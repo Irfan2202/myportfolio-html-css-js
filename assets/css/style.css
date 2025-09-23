@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --bg-color-dark: #0a2a4e;
+  --bg-color-light: #fff;
+  --text-light: #fff;
+  --font-base: 1rem;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex: 1 1 50%;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 24px;
+  background-color: var(--bg-color-dark);
+  color: var(--text-light);
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin: 1rem 0.5rem;
+}
+
+.btn:hover {
+  border: 1px solid var(--bg-color-dark);
+  background-color: var(--bg-color-light);
+  color: var(--bg-color-dark);
+}
+/* Navbar */
+
+.navbar {
+  height: 60px;
+  background-color: var(--bg-color-dark);
+  position: fixed;
+  width: 100%;
+}
+
+.navbar .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: var(--text-light);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  font-size: var(--font-base);
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: var(--text-light);
+  padding: 0 1rem;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-color-dark);
+  color: var(--text-light);
+  height: 8vh;
+}
+
+footer .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 991px) {
+  .brand {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .column {
+    flex: 1 1 50%;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 60px;
+  }
+  .brand {
+    font-size: 1.2rem;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .column {
+    flex: 1 1 100%;
+    margin-top: 2rem;
+  }
+}
