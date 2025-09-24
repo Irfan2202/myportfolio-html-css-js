@@ -45,6 +45,26 @@ section {
   margin-bottom: 1.5rem;
 }
 
+.subtitle {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: var(--font-base);
+  margin: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--color-text-gray);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1 1 50%;
+}
+
 /* ==================== */
 /* Reusable Components  */
 /* ==================== */
@@ -140,16 +160,6 @@ section {
   font-size: 3.5rem;
 }
 
-.hero-content .subtitle {
-  font-size: 1.5em;
-  margin: 1.2rem;
-  color: var(--color-text-gray);
-}
-
-.hero-content p {
-  color: var(--color-text-gray);
-}
-
 .hero-content span {
   color: var(--color-primary);
 }
@@ -166,15 +176,22 @@ section.about {
   background-color: var(--bg-color-light);
 }
 
+.content h2 {
+  text-align: center;
+}
+
 /* Footer Section */
 .footer {
   background-color: var(--color-primary);
-  color: var(--color-text-light);
   height: 8vh;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.footer p {
+  color: var(--color-text-light);
 }
 
 /* ==================== */
@@ -206,8 +223,13 @@ section.about {
   .nav-links {
     display: none;
   }
-
   .hero-content .title {
     font-size: 2rem;
+  }
+  .row {
+    display: flex;
+  }
+  .column {
+    flex: 1 1 100%;
   }
 }
