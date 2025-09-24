@@ -3,54 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Irfan Portfolio</title>
-    <!-- My Css -->
+    <title>IrfanDev - Web Developer Portfolio</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <header>
-      <nav>
-        <div class="navbar">
-          <div class="container">
-            <a href="#" class="brand">Irfan<span>Web</span></a>
-            <ul class="nav-links">
-              <li><a href="#">Beranda</a></li>
-              <li><a href="">Tentang</a></li>
-              <li><a href="">Layanan</a></li>
-              <li><a href="">Portfolio</a></li>
-              <li><a href="">Artikel</a></li>
-              <li><a href="">Kontak</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <header class="navbar">
+      <div class="container">
+        <a href="#" class="brand">Irfan<span>Dev</span></a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#artikel">Artikel</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero" id="hero">
-      <div class="container">
-            <div class="content">
-              <h1 class="title">Halo, Nama saya Irfan</h1>
-              <p>
-                saya adalah seorang web developer Lorem ipsum dolor sit, amet
-                consectetur adipisicing elit. Nemo voluptatibus sed molestias
-                suscipit veniam, nesciunt atque pariatur quibusdam nulla
-                dolores?
-              </p>
-              <a class="btn">Lihat Proyek</a>
-              <a class="btn">Kontak Saya</a>
+    <main>
+      <section id="hero" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="title">Halo, Saya <span>Irfan</span></h1>
+            <p class="subtitle">Web Developer</p>
+            <p>
+              Seorang web developer dengan 1 tahun pengalaman dalam HTML, CSS,
+              JavaScript, PHP, Laravel, dan sedang mempelajari React.js. Siap
+              membantu mewujudkan visi digital Anda.
+            </p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-primary">Lihat Portfolio</a>
+              <a href="#" class="btn btn-secondary">Hubungi Saya</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-     <footer class="footer">
+      <section class="about" id="about">
         <div class="container">
-            <p>Copy right @irfan ade purnomo 2025</p>
+          <h1 class="title">Tentang Saya</h1>
         </div>
-     </footer>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Copyright &copy; 2025 IrfanDev. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
