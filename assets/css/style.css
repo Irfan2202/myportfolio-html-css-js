@@ -272,4 +272,11 @@ section.about {
   .column {
     flex: 1 1 100%;
   }
+  .about .row .column .skill {
+    width: 100%;
+  }
+
+  .about .row .column:has(.skill) {
+    flex: 1 1 50% !important;
+  }
 }
