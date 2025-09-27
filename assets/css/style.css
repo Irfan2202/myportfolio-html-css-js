@@ -176,7 +176,8 @@ p {
 }
 
 /* About Section */
-section.about {
+section.about,
+section.portfolio {
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: var(--bg-color-light);
@@ -235,12 +236,17 @@ section p {
   margin: 2rem 0;
 }
 
-.services .row {
+.services .row,
+.portfolio .row {
   gap: 1rem;
+  justify-content: center;
 }
 
-.services .column {
+.services .column,
+.portfolio .column {
   flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -263,6 +269,10 @@ section p {
   margin: 1rem 0;
 }
 
+.card h2 {
+  font-size: 2rem;
+}
+
 .card p {
   padding: 1rem;
 }
@@ -272,6 +282,36 @@ section p {
   font-size: var(--font-base);
   line-height: 1.5rem;
 }
+
+/* Portfolio section */
+.portfolio .row {
+  gap: 1rem;
+  justify-content: flex-start;
+}
+.portfolio .card {
+  background-color: var(--color-light);
+}
+.portfolio .column {
+  justify-content: flex-start;
+}
+
+.portfolio .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Override style untuk portfolio card */
+.portfolio .card,
+.portfolio .card h2,
+.portfolio .card .title,
+.portfolio .card p,
+.portfolio .card .subtitle {
+  text-align: left;
+  margin-left: 0;
+}
+
 /* Footer Section */
 .footer {
   background-color: var(--color-primary);
@@ -300,11 +340,46 @@ section p {
     font-size: 2rem;
   }
   .card {
-    margin: 2rem;
+    margin: 1rem;
+    max-width: 400px;
+  }
+
+  .portfolio .column {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .portfolio .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .portfolio .card ul li {
+    margin: 0;
+  }
+
+  .portfolio .card ul li button {
+    padding: 5px 12px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .row {
+    display: flex;
+  }
+  .column {
+    flex: 1 1 100%;
+  }
   .navbar {
     height: 60px;
   }
@@ -314,24 +389,14 @@ section p {
   .container {
     padding: 0 1rem;
   }
-
   .nav-links {
     display: none;
   }
-
-  .about .content h2 {
-    margin-top: 1.5rem;
-  }
-
   .hero-content h1 {
     font-size: 2.5rem;
   }
-
-  .row {
-    display: flex;
-  }
-  .column {
-    flex: 1 1 100%;
+  .about .content h2 {
+    margin-top: 1.5rem;
   }
   .about .row .column .skill {
     width: 100%;
@@ -339,6 +404,12 @@ section p {
 
   .about .row .column:has(.skill) {
     flex: 1 1 50% !important;
+  }
+  .services .column,
+  .portfolio .column {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
   }
   .column .card {
     margin: 2rem;
