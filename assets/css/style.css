@@ -200,8 +200,13 @@ section.about {
   height: auto;
   border-radius: 10px;
 }
+
 .content h2 {
   text-align: center;
+}
+
+.content p {
+  text-align: left;
 }
 
 .skill {
@@ -209,15 +214,64 @@ section.about {
 }
 
 .skill p {
-  margin: 1rem 0;
   padding: 0;
   color: var(--color-dark);
+  text-align: left !important;
+  margin-left: 0;
 }
 
 .skill ul li {
   line-height: 2rem;
 }
 
+/* Services Section */
+section.services {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+section p {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.services .row {
+  gap: 1rem;
+}
+
+.services .column {
+  flex: 1 1 30%;
+}
+
+.card {
+  box-sizing: border-box;
+  border: 3px solid var(--bg-color-light);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block;
+  padding: 2rem;
+  max-width: 400px;
+  min-height: 450px;
+  height: 100%;
+}
+
+.card i {
+  font-size: 3rem;
+  color: #4285f4;
+  margin: 1rem 0;
+}
+
+.card p {
+  padding: 1rem;
+}
+
+.card p,
+.card ul li {
+  font-size: var(--font-base);
+  line-height: 1.5rem;
+}
 /* Footer Section */
 .footer {
   background-color: var(--color-primary);
@@ -245,6 +299,9 @@ section.about {
   .title {
     font-size: 2rem;
   }
+  .card {
+    margin: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -260,6 +317,10 @@ section.about {
 
   .nav-links {
     display: none;
+  }
+
+  .about .content h2 {
+    margin-top: 1.5rem;
   }
 
   .hero-content h1 {
@@ -278,5 +339,8 @@ section.about {
 
   .about .row .column:has(.skill) {
     flex: 1 1 50% !important;
+  }
+  .column .card {
+    margin: 2rem;
   }
 }
