@@ -1,11 +1,12 @@
 /* ==================== */
-/* Global Styles   */
+/* Global Styles         */
 /* ==================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 :root {
@@ -103,7 +104,7 @@ p {
 }
 
 /* ==================== */
-/* Layout & Sections  */
+/* Layout & Sections    */
 /* ==================== */
 /* Navbar */
 .navbar {
@@ -188,15 +189,10 @@ section.portfolio {
   margin: 3rem 0;
 }
 
-.column img {
+.column img,
+.about img {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.about img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
@@ -226,7 +222,8 @@ section.portfolio {
 }
 
 /* Services Section */
-section.services {
+section.services,
+section.contact {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -283,14 +280,16 @@ section p {
   line-height: 1.5rem;
 }
 
-/* Portfolio section */
+/* Portfolio Section */
 .portfolio .row {
   gap: 1rem;
   justify-content: flex-start;
 }
+
 .portfolio .card {
   background-color: var(--color-light);
 }
+
 .portfolio .column {
   justify-content: flex-start;
 }
@@ -312,22 +311,289 @@ section p {
   margin-left: 0;
 }
 
-/* Footer Section */
-.footer {
-  background-color: var(--color-primary);
-  height: 8vh;
-  text-align: center;
+.portfolio .card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.portfolio .card ul li {
+  margin: 0;
+}
+
+.portfolio .card ul li button {
+  padding: 5px 12px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  background: #f9f9fb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+/* Kiri Info */
+.contact-info .info-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info .info-card .icon {
+  width: 50px;
+  height: 50px;
+  background: #e8f0ff;
+  color: #3b82f6;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-right: 15px;
 }
 
-.footer p {
-  color: var(--color-text-light);
+.contact-info .info-card h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-info .info-card p {
+  margin: 2px 0 0;
+  color: #555;
+}
+
+/* Kanan Form */
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==================== */
-/* Media Queries  */
+/* Footer Section        */
+/* ==================== */
+.footer {
+  background-color: #1c2532;
+  color: #fff;
+  padding: 60px 20px 20px;
+  font-size: 0.95rem;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* Brand & Deskripsi */
+.footer-about .brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-about .brand span {
+  color: #4285f4;
+}
+
+.footer-about p {
+  color: #ccc;
+  line-height: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* Sosial */
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #2a3444;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  transition: background 0.3s;
+}
+
+.social-icons a:hover {
+  background: #4285f4;
+}
+
+/* Links */
+.footer-links h4,
+.footer-services h4,
+.footer-contact h4 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer-links ul,
+.footer-services ul,
+.footer-contact ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links ul li,
+.footer-services ul li,
+.footer-contact ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a,
+.footer-services ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover,
+.footer-services ul li a:hover {
+  color: #4285f4;
+}
+
+/* Kontak */
+.footer-contact ul li {
+  color: #ccc;
+}
+
+/* Bottom */
+.footer hr {
+  border: 0;
+  border-top: 1px solid #2c3a4c;
+  margin: 30px 0 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.footer-bottom span {
+  color: #f87171;
+}
+
+/* Responsif Footer */
+@media screen and (max-width: 991px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* ==================== */
+/* Media Queries Umum    */
 /* ==================== */
 @media screen and (max-width: 991px) {
   .brand {
@@ -343,26 +609,14 @@ section p {
     margin: 1rem;
     max-width: 400px;
   }
-
   .portfolio .column {
     flex: 1 1 40%;
     display: flex;
     justify-content: center;
   }
-
   .portfolio .card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
     gap: 8px;
   }
-
-  .portfolio .card ul li {
-    margin: 0;
-  }
-
   .portfolio .card ul li button {
     padding: 5px 12px;
     background: #f0f0f0;
@@ -401,7 +655,6 @@ section p {
   .about .row .column .skill {
     width: 100%;
   }
-
   .about .row .column:has(.skill) {
     flex: 1 1 50% !important;
   }
