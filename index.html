@@ -180,7 +180,7 @@
       <section class="portfolio" id="portfolio">
         <div class="container">
           <h1 class="title">Portfolio</h1>
-          <p>Beberapa project yang telah saya kerjakan</p>
+          <p class="subtitle">Beberapa project yang telah saya kerjakan</p>
           <div class="row">
             <div class="column">
               <div class="card">
@@ -241,80 +241,56 @@
         </div>
       </section>
 
-      <!-- Contact Section -->
+      <!-- Contact Section  -->
       <section class="contact" id="contact">
         <div class="container">
-          <div class="contact-grid">
-            <!-- Kiri: Info Kontak -->
-            <div class="contact-info">
-              <div class="info-card">
-                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
-                <div>
-                  <h4>Email</h4>
-                  <p>irfanapurnomo02@gmail.com</p>
+          <h1 class="title">Kontak Saya</h1>
+          <div class="row">
+            <!-- Column Kiri - Info -->
+            <div class="column info">
+              <div class="contact-info">
+                <div class="info-card">
+                  <div class="icon-circle">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4>Email</h4>
+                    <p>irfan@example.com</p>
+                  </div>
                 </div>
-              </div>
-
-              <div class="info-card">
-                <div class="icon"><i class="fa-solid fa-phone"></i></div>
-                <div>
-                  <h4>Telepon</h4>
-                  <p>+62 857-2112-2232</p>
+                <div class="info-card">
+                  <div class="icon-circle">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <h4>Telepon</h4>
+                    <p>+62 812-3456-7890</p>
+                  </div>
                 </div>
-              </div>
-
-              <div class="info-card">
-                <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                <div>
-                  <h4>Lokasi</h4>
-                  <p>Bandung, Indonesia</p>
+                <div class="info-card">
+                  <div class="icon-circle">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <h4>Lokasi</h4>
+                    <p>Jakarta, Indonesia</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Kanan: Form -->
-            <div class="contact-form">
-              <h2>Kirim Pesan</h2>
-              <p>Isi form di bawah ini dan saya akan merespon dalam 24 jam</p>
-              <form>
+            <!-- Column Kanan - Form -->
+            <div class="column form">
+              <form class="contact-form">
+                <h2>Kirim Pesan</h2>
+                <p>Isi form di bawah ini dan saya akan merespon dalam 24 jam</p>
                 <div class="form-row">
-                  <div class="form-group">
-                    <label for="name">Nama Lengkap *</label>
-                    <input
-                      type="text"
-                      id="name"
-                      placeholder="Masukkan nama Anda"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      placeholder="nama@example.com"
-                    />
-                  </div>
+                  <input type="text" placeholder="Nama Lengkap *" required />
+                  <input type="email" placeholder="Email *" required />
                 </div>
-
-                <div class="form-group">
-                  <label for="subject">Subjek *</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    placeholder="Tentang apa yang ingin Anda diskusikan?"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="message">Pesan *</label>
-                  <textarea
-                    id="message"
-                    rows="5"
-                    placeholder="Ceritakan lebih detail tentang project atau kebutuhan Anda..."
-                  ></textarea>
-                </div>
-
-                <button type="submit" class="btn-primary">
+                <input type="text" placeholder="Subjek *" required />
+                <textarea rows="5" placeholder="Pesan *" required></textarea>
+                <button type="submit" class="btn btn-primary">
                   <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
                 </button>
               </form>
@@ -323,63 +299,5 @@
         </div>
       </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <!-- Kiri -->
-          <div class="footer-about">
-            <h2 class="brand">Irfan<span>Dev</span></h2>
-            <p>
-              Web Developer passionate yang siap membantu mewujudkan visi
-              digital Anda dengan solusi kreatif dan inovatif.
-            </p>
-            <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-github"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#">Beranda</a></li>
-              <li><a href="#about">Tentang</a></li>
-              <li><a href="#services">Layanan</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-            </ul>
-          </div>
-
-          <!-- Layanan -->
-          <div class="footer-services">
-            <h4>Layanan</h4>
-            <ul>
-              <li>Web Design</li>
-              <li>Web Development</li>
-              <li>SEO Optimization</li>
-            </ul>
-          </div>
-
-          <!-- Kontak -->
-          <div class="footer-contact">
-            <h4>Kontak</h4>
-            <ul>
-              <li>irfanapurnomo02@gmail.com</li>
-              <li>+62 857-2112-2232</li>
-              <li>Bandung, Indonesia</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr />
-        <div class="footer-bottom">
-          <p>© 2025 IrfanDev. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
